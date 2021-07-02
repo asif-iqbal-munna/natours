@@ -1,0 +1,43 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+
+html {
+    font-size: 10px;
+
+    @include respond(big-desk) {
+        font-size: 80%;
+    }
+   
+    @include respond(tab-land) {
+        font-size: 56.25%;
+    }
+
+    @include respond(tab-port) {
+        font-size: 50%;
+    }
+    
+}
+body {
+    color: $color-grey-dark;
+    font-family: "lato", sans-serif;
+    line-height: 1.7;
+    font-weight: 400;
+    padding: 3rem;
+    box-sizing: border-box;
+
+    @include respond(tab-port) {
+        padding: 0;
+    }
+}
+
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
+}
